@@ -1,0 +1,118 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root {
+    --primaryOrange: hsl(25, 97%, 53%);
+    --mediumGray: hsl(216, 12%, 54%);
+    --lightGrey:hsl(217, 12%, 63%);
+    --backgroundColor:hsl(216, 12%, 8%);
+    --darkBlue:hsl(213, 19%, 18%);
+    --white:hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--backgroundColor);
+}
+main {
+    width: 320px;
+    height: 320px;
+    background-color: var(--darkBlue);
+    border-radius: 15px;
+    padding: 20px;
+}
+.ratingState {
+    display: flex;
+    flex-direction: column;
+    row-gap:15px;
+    transition: .3s;
+}
+.starIcon{
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:35px;
+    border-radius: 50%;
+    background-color:hsl(214, 16%, 26%) ;
+}
+.ratingState h2 {
+    color: var(--white);
+}
+.ratingState p{
+    color: var(--white);
+    margin-top: 5px;
+}
+.rating{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+.rating button {
+    background-color:hsl(214, 16%, 26%);
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    color: var(--lightGrey);
+    transition: .3s;
+}
+.rating button:hover {
+    background-color: var(--mediumGray);
+    color: white;
+    transition: .3s;
+}
+.rating button:focus {
+    background-color: var(--primaryOrange);
+    color: white;
+    transition: .3s;
+}
+.submitButton {
+    background-color: var(--primaryOrange);
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    transition: .3s;
+}
+.submitButton:hover , .submitButton:focus {
+    transition: .3s;
+    color: var(--primaryOrange);
+    background-color: var(--white);
+}
+.thankYouState {
+    display: none;
+    transition: .3s;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.illustrationIcon {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.selection {
+    width: fit-content;
+    background-color: hsl(214, 16%, 26%);
+    margin: 0 auto;
+    color: var(--primaryOrange);
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.thankYouState h2{
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.thankYouState .text p{
+    color: var(--lightGrey);
+    text-align: center;
+}
